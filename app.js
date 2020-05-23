@@ -1,14 +1,11 @@
-
-
-function saludar( nombre ) {
-    console.table( 'Hola ' + nombre ); // Hola Logan
-}
-
-
-const wolverine = {
-    nombre: 'Logan'
-};
-
-
-saludar(  );
-
+"use strict";
+//Funcion anonima autoinvocada
+(function () {
+    function saludar(nombre) {
+        console.table('Hola, ' + nombre); // Hola Logan
+    }
+    var wolverine = {
+        nombre: 'Logan'
+    };
+    saludar(wolverine.nombre);
+})();
