@@ -2,21 +2,20 @@
 //FUNCIONES DE FLECHA
 (function () {
     //Funcion asignada a una variable
-    var miFuncion = function (a) {
+    const miFuncion = function (a) {
         return a.toUpperCase();
     };
     //funsion tradicional
-    var miFuncionF = function (a) { return a.toUpperCase(); };
-    var sumarN = function (a, b) {
+    const miFuncionF = (a) => a.toUpperCase();
+    const sumarN = function (a, b) {
         return a + b;
     };
-    var sumarF = function (a, b) { return a + b; };
-    var hulk = {
+    const sumarF = (a, b) => a + b;
+    const hulk = {
         nombre: 'Hulk',
-        smash: function () {
-            var _this = this;
-            setTimeout(function () {
-                console.log(_this.nombre + " smash!!!");
+        smash() {
+            setTimeout(() => {
+                console.log(`${this.nombre} smash!!!`);
             }, 1000);
         }
     };
