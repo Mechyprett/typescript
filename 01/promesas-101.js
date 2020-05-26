@@ -1,13 +1,13 @@
 "use strict";
-(() => {
+(function () {
     console.log('Inicio');
-    const prom1 = new Promise((resolve, reject) => {
-        setTimeout(() => {
+    var prom1 = new Promise(function (resolve, reject) {
+        setTimeout(function () {
             reject('Se termino el timeout');
         }, 1000);
     });
     prom1
-        .then(mensaje => console.log(mensaje))
-        .catch(err => console.warn(err));
+        .then(function (mensaje) { return console.log(mensaje); })
+        .catch(function (err) { return console.warn(err); });
     console.log('Fin');
 })();

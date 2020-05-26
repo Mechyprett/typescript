@@ -1,6 +1,6 @@
 "use strict";
-(() => {
-    const avenger = {
+(function () {
+    var avenger = {
         nombre: 'Steve',
         clave: 'Capitan America',
         poder: 'Droga'
@@ -19,12 +19,13 @@
     //}
     //extraer(avenger)
     //DESTRUCTURACION DE ARREGLOS
-    const avengers = ['Thor', 'Ironman', 'Spiderman'];
-    const [, , arana] = avengers; //las comas significa que me interesa dichasposiciones
+    var avengers = ['Thor', 'Ironman', 'Spiderman'];
+    var arana = avengers[2]; //las comas significa que me interesa dichasposiciones
     //console.log( loki);
     //console.log(hombre);
     // console.log(arana);
-    const extraerArr = ([thor, ironman, spiderman]) => {
+    var extraerArr = function (_a) {
+        var thor = _a[0], ironman = _a[1], spiderman = _a[2];
         console.log(thor);
         console.log(ironman);
         console.log(spiderman);
